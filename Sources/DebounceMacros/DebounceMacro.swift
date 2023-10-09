@@ -52,6 +52,7 @@ public struct DebounceMacro: DeclarationMacro {
         }
 
         return [
+            // Remove the trailing curly brace below to hang the swift compiler ↘️🚒
             """
             if case Result.failure = await debounce(interval: \(raw: argument.expression.description), debug: \(raw: debugEnabled)) {
               \(raw: expression)
